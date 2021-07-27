@@ -1,22 +1,17 @@
 package com.vish.fando.stock.utils;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
-import com.vish.fando.stock.live.DataCache;
+import com.vish.fando.stock.mediator.DataCache;
 import com.vish.fando.stock.mediator.TickObserver;
 import com.vish.fando.stock.model.Ticker;
 import com.vish.fando.stock.model.Transaction;
-import com.vish.fando.stock.model.TransactionService;
+import com.vish.fando.stock.live.TransactionService;
 import com.zerodhatech.models.Tick;
 
 import lombok.Getter;
@@ -36,6 +31,8 @@ public class TickerUtils implements DesktopConstants {
 	TransactionService transactionService;
 	@Setter
 	TickObserver tickObserver;
+
+	String[] indexSymbols = {"NIFTY BANK", "NIFTY 50"};
 
 	Map<String, Ticker> tickerModelList = new HashMap<>();
 
@@ -77,8 +74,7 @@ public class TickerUtils implements DesktopConstants {
 				.filter(e -> e.getValue().getLtp() > minPrice && e.getValue().getLtp() < maxPrice)
 				.filter(s -> s.getKey().startsWith("BANKNIFTY")).map(e -> e.getKey()).collect(Collectors.toSet());
 
-		scripts.add("NIFTY BANK");
-		scripts.add("NIFTY 50");
+		scripts.addAll(Arrays.asList(indexSymbols));
 		return scripts;
 	}
 }

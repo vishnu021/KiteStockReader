@@ -1,4 +1,4 @@
-package com.vish.fando.stock.live;
+package com.vish.fando.stock.mediator;
 
 import java.util.Date;
 import java.util.List;

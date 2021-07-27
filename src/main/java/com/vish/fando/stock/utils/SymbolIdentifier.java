@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
-import com.vish.fando.stock.live.DataCache;
+import com.vish.fando.stock.mediator.DataCache;
 import com.vish.fando.stock.model.ScriptModel;
 
 @Component
@@ -42,7 +42,7 @@ public class SymbolIdentifier {
 	private List<String> generateStrikes(ScriptModel key, Double ltp) {
 		List<String> symbolList = new ArrayList<>();
 		symbolList.add(key.getIndexName());
-		int strikePrice = 0;
+		int strikePrice;
 		ltp = ltp - ltp % key.getTick();
 
 		for (int i = -7; i < 12; i++) {

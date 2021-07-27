@@ -1,7 +1,9 @@
-package com.vish.fando.stock.model;
+package com.vish.fando.stock.dao;
 
 import java.util.List;
 
+import com.vish.fando.stock.model.SymbolDateModel;
+import com.vish.fando.stock.model.Transaction;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

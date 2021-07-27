@@ -20,13 +20,16 @@ public class BrowserLauncher {
 	@Value("${kite.api_key}")
 	private String apiKey;
 
+	@Value("${kite.api_url}")
+	private String api_url;
+
 	@EventListener(ApplicationReadyEvent.class)
 	public void launchBrowser() {
 		if (liveData) {
 			System.setProperty("java.awt.headless", "false");
 			Desktop desktop = Desktop.getDesktop();
 			try {
-				desktop.browse(new URI("https://kite.trade/connect/login?v=3&api_key=" + apiKey));
+				desktop.browse(new URI(api_url + apiKey));
 			} catch (Exception e) {
 				log.error(e);
 			}

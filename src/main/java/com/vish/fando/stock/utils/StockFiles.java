@@ -40,8 +40,8 @@ public class StockFiles implements DesktopConstants {
 		mapper = new ObjectMapper();
 		tickerBuffer = new HashMap<>();
 		bufferLength = 0;
-		createdirectoryIfNotExist(filePath);
-		createdirectoryIfNotExist(logPath);
+		createDirectoryIfNotExist(filePath);
+		createDirectoryIfNotExist(logPath);
 	}
 
 	public void saveInstrumentCache(List<Instrument> instruments) {
@@ -65,7 +65,7 @@ public class StockFiles implements DesktopConstants {
 		return instruments;
 	}
 
-	public void createdirectoryIfNotExist(String path) {
+	public void createDirectoryIfNotExist(String path) {
 		try {
 			Files.createDirectories(Paths.get(path));
 		} catch (IOException e) {
@@ -95,7 +95,7 @@ public class StockFiles implements DesktopConstants {
 	}
 
 	private String candleFileName(String instrument, Date fromDate) {
-		createdirectoryIfNotExist(filePath + dateFormatter.format(fromDate));
+		createDirectoryIfNotExist(filePath + dateFormatter.format(fromDate));
 		return filePath + dateFormatter.format(fromDate) + "\\" + instrument + ".json";
 	}
 
@@ -140,8 +140,8 @@ public class StockFiles implements DesktopConstants {
 		}
 	}
 
-	public void logOrders(Object... logmessage) {
-		List<String> logs = Arrays.stream(logmessage).map(this::parse).collect(Collectors.toList());
+	public void logOrders(Object... logMessage) {
+		List<String> logs = Arrays.stream(logMessage).map(this::parse).collect(Collectors.toList());
 		try {
 			String path = filePath + "buyOrders" + dateFormatter.format(TimeUtils.currentTime()) + ".csv";
 			String message = formatter.format(TimeUtils.currentTime()) + ",\t" + String.join(",\t", logs) + "\n";

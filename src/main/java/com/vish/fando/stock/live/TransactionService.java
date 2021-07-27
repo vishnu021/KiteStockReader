@@ -1,9 +1,11 @@
-package com.vish.fando.stock.model;
+package com.vish.fando.stock.live;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.vish.fando.stock.model.Transaction;
+import com.vish.fando.stock.dao.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

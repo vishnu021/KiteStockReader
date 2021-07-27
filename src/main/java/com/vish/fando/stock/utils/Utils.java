@@ -4,7 +4,7 @@ public class Utils {
 	public static String getStringRoundedPrice(double price) {
 		boolean signed = price < 0;
 		price = Math.abs(price);
-		String simplifiedPrice = "";
+		String simplifiedPrice;
 
 		if (price > (1000000))
 			simplifiedPrice = getFormattedRoundPrice(price / (1000 * 1000)) + "M";
