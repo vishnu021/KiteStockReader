@@ -1,0 +1,137 @@
+{"properties": [
+  {
+    "name": "banknifty.startRange",
+    "type": "java.lang.String",
+    "description": "A description for 'banknifty.startRange'"
+  },
+  {
+    "name": "kite.api_key",
+    "type": "java.lang.String",
+    "description": "A description for 'kite.api_key'"
+  },
+  {
+    "name": "kite.user_id",
+    "type": "java.lang.String",
+    "description": "A description for 'kite.user_id'"
+  },
+  {
+    "name": "kite.api_secret",
+    "type": "java.lang.String",
+    "description": "A description for 'kite.api_secret'"
+  },
+  {
+    "name": "nextExpiryDate",
+    "type": "java.lang.String",
+    "description": "A description for 'nextExpiryDate'"
+  },
+  {
+    "name": "symbolPrefix",
+    "type": "java.lang.String",
+    "description": "A description for 'symbolPrefix'"
+  },
+  {
+    "name": "days_before_today",
+    "type": "java.lang.String",
+    "description": "A description for 'days_before_today'"
+  },
+  {
+    "name": "dateFormat",
+    "type": "java.lang.String",
+    "description": "A description for 'dateFormat'"
+  },
+  {
+    "name": "live_data",
+    "type": "java.lang.String",
+    "description": "A description for 'live_data'"
+  },
+  {
+    "name": "target_percent",
+    "type": "java.lang.String",
+    "description": "A description for 'target_percent'"
+  },
+  {
+    "name": "revised_target_percent",
+    "type": "java.lang.String",
+    "description": "A description for 'revised_target_percent'"
+  },
+  {
+    "name": "minimum_stopLoss_percent",
+    "type": "java.lang.String",
+    "description": "A description for 'minimum_stopLoss_percent'"
+  },
+  {
+    "name": "maximum_stopLoss_percent",
+    "type": "java.lang.String",
+    "description": "A description for 'maximum_stopLoss_percent'"
+  },
+  {
+    "name": "slm_delta_price",
+    "type": "java.lang.String",
+    "description": "A description for 'slm_delta_price'"
+  },
+  {
+    "name": "minimum_buy_price",
+    "type": "java.lang.String",
+    "description": "A description for 'minimum_buy_price'"
+  },
+  {
+    "name": "maximum_buy_price",
+    "type": "java.lang.String",
+    "description": "A description for 'maximum_buy_price'"
+  },
+  {
+    "name": "order_size",
+    "type": "java.lang.String",
+    "description": "A description for 'order_size'"
+  },
+  {
+    "name": "trade_in_last_hour",
+    "type": "java.lang.String",
+    "description": "A description for 'trade_in_last_hour'"
+  },
+  {
+    "name": "call_orders",
+    "type": "java.lang.String",
+    "description": "A description for 'call_orders'"
+  },
+  {
+    "name": "put_orders",
+    "type": "java.lang.String",
+    "description": "A description for 'put_orders'"
+  },
+  {
+    "name": "place_orders",
+    "type": "java.lang.String",
+    "description": "A description for 'place_orders'"
+  },
+  {
+    "name": "available_cash",
+    "type": "java.lang.String",
+    "description": "A description for 'available_cash'"
+  },
+  {
+    "name": "maximum_order_count",
+    "type": "java.lang.String",
+    "description": "A description for 'maximum_order_count'"
+  },
+  {
+    "name": "nifty.endRange",
+    "type": "java.lang.String",
+    "description": "A description for 'nifty.endRange'"
+  },
+  {
+    "name": "nifty.startRange",
+    "type": "java.lang.String",
+    "description": "A description for 'nifty.startRange'"
+  },
+  {
+    "name": "nifty.stock.tick",
+    "type": "java.lang.String",
+    "description": "A description for 'nifty.stock.tick'"
+  },
+  {
+    "name": "nifty.stock.price",
+    "type": "java.lang.String",
+    "description": "A description for 'nifty.stock.price'"
+  }
+]}
